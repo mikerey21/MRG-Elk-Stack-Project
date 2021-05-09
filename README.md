@@ -149,8 +149,11 @@ SSH into the control node and follow the steps below:
 
 
 - _Which file is the playbook? Where do you copy it?_
-  - Install-Elk.yml 
+  - Install-Elk.yml You would copy it to the Ansible container. My container is called magical_bhaskara
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+  - Filebeat-config.yml. You need to modify the file to include the Elk Server's IP address on lines 1105 and 1805. 
+    
 - _Which URL do you navigate to in order to check that the ELK server is running?
+  - http://20.94.213.188:5601/app/kibana 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
