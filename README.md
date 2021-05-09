@@ -157,3 +157,15 @@ SSH into the control node and follow the steps below:
   - http://20.94.213.188:5601/app/kibana 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+ - ssh mrgadmin@64.145.76.92
+ - sudo su
+ - docker container list -a
+ - docker start container && attach container
+ - cd /etc/ansible
+ - ansible-playbook elk.yml 
+ - cd /etc/ansible/roles
+ - ansible-playbook filebeat-playboook.yml
+ - ansible-playbook metricbeat-playbook.yml
+ - open a web browser (20.94.213.188:5601) to open the Kibana portal. 
+
